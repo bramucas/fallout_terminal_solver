@@ -1,3 +1,4 @@
+# Just control the word list
 class WordList(object):
 
 	wordList = None
@@ -20,8 +21,8 @@ class WordList(object):
 			return True
 
 		return False
-# REVISAR LONGITUD PALABRAS
 
+	# Delete all words in the list wich not match with hits 
 	def filter(self, word, hits):
 		def compare(word1, word2):
 			hits = 0

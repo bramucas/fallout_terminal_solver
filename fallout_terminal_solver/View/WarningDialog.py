@@ -2,6 +2,7 @@ import gi
 gi.require_version('Gtk','3.0')
 from gi.repository import Gtk
 
+# Just a simple window that shows a message
 class WarningDialog():
 
     def __init__(self,titulo,mensaje,parent):

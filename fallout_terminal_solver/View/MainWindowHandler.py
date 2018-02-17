@@ -5,6 +5,7 @@ from gi.repository import Gtk
 from View.MainWindow 	import MainWindow
 from View.WarningDialog import WarningDialog
 
+# Connects view events with model functions
 class MainWindowHandler(object):
 
 	MainWindow = None
