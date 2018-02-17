@@ -2,18 +2,18 @@ import gi
 gi.require_version('Gtk','3.0')
 from gi.repository import Gtk
 
-from View import MainWindow
-from View import DialogoAdvertencia
-from Model import WordList
+from View.MainWindow 	import MainWindow
+from View.WarningDialog import WarningDialog
 
-class Controller(object):
+class MainWindowHandler(object):
 
 	MainWindow = None
 	ModelList  = None
 
-	def __init__ (self):
+	def __init__ (self,wordList):
 		listStore = Gtk.ListStore(str)
-		self.ModelList = WordList(listStore)
+		wordList.setWordList(listStore)
+		self.ModelList = wordList
 		self.MainWindow = MainWindow(listStore)
 		# Conexiones
 		self.MainWindow.addWordB.connect("clicked", self.addNewWordHandler)
@@ -25,14 +25,14 @@ class Controller(object):
 	def addNewWordHandler(self,button):
 		newWord = self.MainWindow.wordEntry.get_text()
 		if (self.ModelList.add(newWord.upper()) == False):
-			DialogoAdvertencia("Atención","La palabra que intentas añadir no se corresponde en tamaño con las demás",self.MainWindow)
+			WarningDialog("Atención","La palabra que intentas añadir no se corresponde en tamaño con las demás",self.MainWindow)
 		else:
 			self.MainWindow.wordEntry.set_text("")
 
 	def filterHandler(self,button):
 		model, it = self.MainWindow.viewList.get_selection().get_selected()
 		if it == None:
-			DialogoAdvertencia("Atención","Antes debe seleccionar una película",self.MainWindow)
+			WarningDialog("Atención","Antes debes seleccionar una palabra",self.MainWindow)
 		else:
 			word = model.get_value(it,0)
 			hits = int(self.MainWindow.hitsEntry.get_text())
@@ -40,8 +40,3 @@ class Controller(object):
 
 	def cleanListHandler(self,button):
 		self.ModelList.clean()
-
-
-
-con = Controller()
-Gtk.main()
