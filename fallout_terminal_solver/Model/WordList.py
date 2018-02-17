@@ -1,12 +1,13 @@
-
 class WordList(object):
 
 	wordList = None
 	size 	 = None
 
-	def __init__(self,wordList):
-		self.wordList = wordList
+	def __init__(self):
 		self.size = None
+
+	def setWordList(self, wordList):
+		self.wordList = wordList
 
 	# Return false if the new word have different size, True in another case
 	def add(self, word):

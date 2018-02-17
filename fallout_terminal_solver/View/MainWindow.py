@@ -62,12 +62,3 @@ class MainWindow(Gtk.Window):
         self.connect("delete-event",Gtk.main_quit)                
         # Mostar IU
         self.show_all()
-
-class DialogoAdvertencia():
-
-    def __init__(self,titulo,mensaje,parent):
-        dialogo = Gtk.Dialog(titulo,parent,0,(Gtk.STOCK_OK,Gtk.ResponseType.OK))
-        dialogo.get_content_area().add(Gtk.Label(mensaje))
-        dialogo.show_all()
-        dialogo.run()
-        dialogo.destroy()
