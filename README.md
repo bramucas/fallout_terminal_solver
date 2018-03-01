@@ -2,11 +2,20 @@
 
 This simple tool is intended to help the user find the terminal solution in the Fallout video game series. This is not a mod for the game, it is an external software written in python.
 
-Actual code it is an old code that wrote a couple of years ago when I was learning python and OO programming. So it needs a refactor.
+You can use it manually adding words in the list or you can use text recognition with ocr technology to get words directly from an screenshot. 
+
+**Recognition utility is under development and may not work properly**.
 
 ### Dependencies
 
-PYGObject installed.
+**For using simple utility**:
+ * [Python GTK+ 3](https://python-gtk-3-tutorial.readthedocs.io/en/latest/)
+
+**For using OCR utility**:
+ * [Tesseract ocr](https://github.com/tesseract-ocr/tesseract) in the path
+ * [Pillow](https://pillow.readthedocs.io/en/latest/) - ```easy_installation Pillow```
+ * [pyocr](https://github.com/openpaperwork/pyocr) - ```pip3 install pyocr```
+
 
 ### Running
 
@@ -14,6 +23,24 @@ PYGObject installed.
 python run.py
 ```
 
-### Ideas and future work
+### How to use
 
- * Text recognition from screenshots of the game with Python OpenCv OCR
+**Manual use**: [video](https://youtu.be/jEZdpVqFKcI)
+
+ * First add all the words you see in the terminal.
+ * Select a word on the terminal and see what happens.
+ * Select the word on the program list, write number of matches and click on 'Comprobar'.
+ * Repeat until you succed.
+ * Remember to clean the list before you start with the next terminal.
+
+**Text recognition**: [video](https://www.youtube.com/watch?v=K-eglpT50m8)
+
+ * Select 'Clean and get words from an image'
+ * Select an screenshot for scan
+ * Wait a moment.
+ * A dialog may appear showing words that weren't recognized properly
+ * Solve the terminal
+
+ ### Future work
+
+  * Fix recognition problems
