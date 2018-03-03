@@ -1,6 +1,6 @@
 # Fallout Terminal solver
 
-This simple tool is intended to help the user find the terminal solution in the Fallout video game series. This is not a mod for the game, it is an external software written in python.
+This simple tool is intended to help the user find the terminal solution in the Fallout videogame series. This is not a mod for the game, it is an external software written in python.
 
 You can use it manually adding words in the list or you can use text recognition with ocr technology to get words directly from an screenshot. 
 
@@ -44,3 +44,12 @@ python run.py
  ### Future work
 
   * Fix recognition problems
+  
+- - -
+[![twitter][1.1]][1]     [![github][2.2]][2]
+
+[1]:https://twitter.com/b_munizcastro
+[1.1]:https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/twitter-24.png
+
+[2]:https://github.com/bramucas
+[2.2]:https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-24.png
