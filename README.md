@@ -46,10 +46,14 @@ python run.py
   * Fix recognition problems
   
 - - -
-[![twitter][1.1]][1]     [![github][2.2]][2]
+[![twitter][1.1]][1]     [![github][2.2]][2]     [![linkedin][3.3]][3]
 
 [1]:https://twitter.com/b_munizcastro
 [1.1]:https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/twitter-24.png
 
 [2]:https://github.com/bramucas
 [2.2]:https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-24.png
+
+[3]:https://www.linkedin.com/in/brais-mu%C3%B1iz-castro-93279115a/
+[3.3]:https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/linkedin-24.png
+
